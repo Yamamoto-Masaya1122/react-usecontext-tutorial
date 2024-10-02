@@ -1,7 +1,13 @@
+import React from 'react';
+import { useCountContext } from '../context/CountContext';
+
 const ComponentC = () => {
+  const { count, setCount } = useCountContext();
   return (
       <div>
           <p>Component C</p>
+          <p>{count}</p>
+          <button onClick={() => setCount(count + 1)}>+</button>
       </div>
   )
 }

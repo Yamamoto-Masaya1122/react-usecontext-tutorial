@@ -1,10 +1,15 @@
-import ComponentA from './components/ComponentA.js';
+import React from 'react';
+import './App.css';
+import ComponentA from './components/ComponentA';
+import { CountProvider } from './context/CountContext';
 
 function App() {
   return(
-    <div style={{ textAlign: 'center' }}>
+    <div className="App">
       <h1>Learn useContext</h1>
-      <ComponentA/>
+      <CountProvider>
+        <ComponentA/>
+      </CountProvider>
     </div>
   );
 }
